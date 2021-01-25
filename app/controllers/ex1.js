@@ -5,7 +5,6 @@ import { tracked } from '@glimmer/tracking';
 export default class Ex1Controller extends Controller {
   @tracked content = '';
   @tracked info = '';
-  @tracked enregistre;
   @tracked visible = false;
   MAX = 100;
 
@@ -35,11 +34,13 @@ export default class Ex1Controller extends Controller {
   @action
   save() {
     console.log('save');
-    this.enregistre = !this.enregistre;
     this.visible = true;
+    this.info = 'Note enregistrée';
   }
 
   @action
-  update() {}
-
+  update() {
+    this.visible = true;
+    this.info = 'Note modifiée';
+  }
 }
