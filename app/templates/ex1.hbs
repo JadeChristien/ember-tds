@@ -1,0 +1,13 @@
+{{page-title "Ex1"}}
+
+<b>Note :</b><br><br>
+<Textarea @placeholder="Entrez votre texte" @value={{content}}/><br><br>
+
+<button {{action "save"}}>Enregistrer</button>
+<button {{action "clear"}}>Effacer</button>
+
+<br><br>
+
+<p> Nombre de caractères restant : </p>
+
+{{outlet}}
