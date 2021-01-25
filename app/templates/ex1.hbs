@@ -1,13 +1,20 @@
 {{page-title "Ex1"}}
+<div class="container">
 
-<b>Note :</b><br><br>
-<Textarea @placeholder="Entrez votre texte" @value={{content}}/><br><br>
+<div class="card">
+  <div class="card-header bg-primary text-light">Ex1 : Note application</div>
+  <div class="card-body">
+    <b>Note :</b><br><br>
+    <Textarea class="form-control" @placeholder="Entrez votre texte" @value={{content}}/><br><br>
 
-<button {{action "save"}}>Enregistrer</button>
-<button {{action "clear"}}>Effacer</button>
+    <button class="btn btn-primary" {{action "save"}}>Enregistrer</button>
+    <button class="btn btn-primary" {{action "clear"}}>Effacer</button>
 
-<br><br>
+    <br><br>
+    <p> Nombre de caractères restant : </p>
 
-<p> Nombre de caractères restant : </p>
+  </div>
+</div>
 
+</div>
 {{outlet}}
