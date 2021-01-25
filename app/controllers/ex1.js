@@ -2,33 +2,44 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
-let MAX = 100;
-
 export default class Ex1Controller extends Controller {
   @tracked content = '';
-  @tracked info = '100';
+  @tracked info = '';
   @tracked enregistre;
   @tracked visible = false;
+  MAX = 100;
 
-  @action
-  compte() {
-    this.info = MAX - this.content.valueOf().length;
-    this.visible = true;
+  get size() {
+    return this.MAX - this.content.length;
+  }
+
+  // eslint-disable-next-line getter-return
+  get style() {
+    if (this.content.length <= 50) {
+      return 'alert-info';
+    }
+    if (this.content.length > 50 && this.content.length < 80) {
+      return 'alert-warning';
+    }
+    if (this.content.length >= 80) {
+      return 'alert-danger';
+    }
   }
 
   @action
   clear() {
     this.content = '';
-    this.info = MAX;
     this.visible = false;
   }
 
   @action
   save() {
+    console.log('save');
     this.enregistre = !this.enregistre;
     this.visible = true;
   }
 
   @action
   update() {}
+
 }

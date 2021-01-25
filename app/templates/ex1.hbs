@@ -5,19 +5,19 @@
   <div class="card-header bg-primary text-light">Ex1 : Note application</div>
   <div class="card-body">
     <b>Note :</b><br><br>
-    <Textarea {{on "keyup" compte }} class="form-control" @placeholder="Entrez votre texte" @value={{content}}/><br>
+    <Textarea class="form-control" @placeholder="Entrez votre texte" @value={{this.content}} @maxlength=100 /><br>
 
     <button class="btn btn-primary" {{action "save"}}>Enregistrer</button>
     <button class="btn btn-primary" {{action "clear"}}>Effacer</button>
 
     <br><br>
-    <div class="alert alert-info">Nombre de caractères restant : {{ this.info }}</div>
+    <div class="alert alert-info">Nombre de caractères restant : {{ this.size }}</div>
 
     {{#if this.visible}}
       {{#if this.enregistre}}
-        <div class="alert alert-info">{{@model.message2}}</div>
+        <div class="alert {{this.style }}">{{@model.message2}}</div>
       {{else}}
-        <div class="alert alert-info">{{@model.message1}}</div>
+        <div class="alert {{this.style }}">{{@model.message1}}</div>
       {{/if}}
     {{/if}}
 
