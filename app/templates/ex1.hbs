@@ -6,19 +6,26 @@
   <div class="card-body">
     <b>Note :</b><br><br>
     <Textarea {{on "keydown" update}} class="form-control" @placeholder="Entrez votre texte" @value={{this.content}} @maxlength=100 /><br>
+    <!-- équivalent de keydown : keypress (onclick) -->
 
-    <button class="btn btn-primary" {{action "save"}}>Enregistrer</button>
+    <button class="btn btn-primary" {{action "save" "model" this.content }}>Enregistrer</button>
     <button class="btn btn-primary" {{action "clear"}}>Effacer</button>
 
     <br><br>
     <div class="alert alert-info">Nombre de caractères restant : {{ this.size }}</div>
 
     {{#if this.visible}}
-        <div class="alert {{this.style }}">{{this.info}}</div>
+        <div class="alert {{this.style}}">{{this.info}}</div>
     {{/if}}
 
   </div>
 </div>
+
+  <ul>
+    {{#each @model as |mot|}}
+      <li>{{mot.items}}</li>
+    {{/each}}
+  </ul>
 
 </div>
 {{outlet}}

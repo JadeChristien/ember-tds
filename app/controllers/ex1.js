@@ -33,7 +33,6 @@ export default class Ex1Controller extends Controller {
 
   @action
   save() {
-    console.log('save');
     this.visible = true;
     this.info = 'Note enregistrée';
   }
