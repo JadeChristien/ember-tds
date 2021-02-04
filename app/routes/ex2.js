@@ -11,4 +11,9 @@ export default class Ex2Route extends Route {
   @action toggleActive(s){
     set(s,'active', !s.active);
   }
+
+  @action toggleVisible(){
+    this.transitionTo('ex2.promo');
+  }
+
 }

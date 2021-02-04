@@ -20,12 +20,13 @@
     {{/each}}
   </ul>
 
-  <div class='total'>
-    <hr>
-    <h3>Total : ${{@model.sumActive}}</h3>
+  <div id='total'>
+    <hr><h3>Total : {{format-currency @model.sumActive '€'}}</h3>
+  </div>
+
+  <button type="button" class="btn btn-primary" {{action "toggleVisible" }} >Valider</button>
 
   </div>
 
-</div>
 
 {{outlet}}

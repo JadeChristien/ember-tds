@@ -23,15 +23,11 @@ export default class Services{
 
   get sumActive(){
     // Programmation fonctionnelle
-    //return this.services.filterBy('active', true).price;
-
-    // Porgrammation classique
-    let result=0;
-    this.services.forEach(s=>{
-      if(s.active){
-        result+=s.price;
-      }
-    });
+    let services = this.services.filterBy('active', true);
+    let result = 0;
+    services.forEach(s=>{
+      result+=s.price;
+    })
     return result;
   }
 
