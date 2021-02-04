@@ -5,8 +5,12 @@
     <div class="card-header bg-primary text-light">Traces des notes de l'application</div>
     <div class="card-body">
 
-    {{model.items}}
-
+      <ul>
+        {{#each @model as |mot|}}
+          <li>{{mot}}</li>
+        {{/each}}
+      </ul>
+      <LinkTo @route="ex1"><button class="btn btn-primary" >Retour</button></LinkTo>
     </div>
   </div>
 

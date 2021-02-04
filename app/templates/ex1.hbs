@@ -8,7 +8,7 @@
     <Textarea {{on "keydown" update}} class="form-control" @placeholder="Entrez votre texte" @value={{this.content}} @maxlength=100 /><br>
     <!-- équivalent de keydown : keypress (onclick) -->
 
-    <button class="btn btn-primary" {{action "model" this.content }} {{ action "save" }} >Enregistrer</button>
+    <button class="btn btn-primary" {{action "save2" this.content }} {{ action "save" }} >Enregistrer</button>
     <button class="btn btn-primary" {{action "clear"}}>Effacer</button>
 
     <br><br>
@@ -20,12 +20,6 @@
 
   </div>
 </div>
-
-  <ul>
-    {{#each @model as |mot|}}
-      <li>{{mot.items}}</li>
-    {{/each}}
-  </ul>
 
 </div>
 {{outlet}}
