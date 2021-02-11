@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e3c73056-517f-4bed-b220-ba9a17f97c9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/ex2/promo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/ex2/promo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/ex2.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/ex2.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/ex2/promo.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/ex2/promo.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +57,12 @@
       <workItem from="1612427719997" duration="270000" />
       <workItem from="1612428085858" duration="32000" />
       <workItem from="1612428120789" duration="15779000" />
-      <workItem from="1612447707387" duration="1630000" />
+      <workItem from="1612447707387" duration="1783000" />
+      <workItem from="1612458564212" duration="162000" />
+      <workItem from="1612613829502" duration="199000" />
+      <workItem from="1612856738721" duration="28000" />
+      <workItem from="1612961614568" duration="9000" />
+      <workItem from="1613026784872" duration="1797000" />
     </task>
     <servers />
   </component>
