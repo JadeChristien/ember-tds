@@ -7,11 +7,14 @@
       <h6>Produits disponibles</h6>
       <div class="input-group">
         <MultiSelect class="form-control"
+                     if='multiStart'
                      @elements={{this.dispoItems}}
                      @selected={{this.dispoItems_}}
                      @onChange={{this.changeDispo}}
         />
       </div>
+
+      {{nb-items-included this.includedItems.length}}
 
     </div>
     <div class="col-2"><br>
