@@ -1,0 +1,42 @@
+{{page-title "Step1"}}
+
+<div class="container">
+  <h2>Sélectionnez vos produits</h2><br>
+  <div class="row">
+    <div class="col-5">
+      <h6>Produits disponibles</h6>
+      <div class="input-group">
+        <MultiSelect class="form-control"
+                     @elements={{this.dispoItems}}
+                     @selected={{this.dispoItems_}}
+                     @onChange={{this.changeDispo}}
+        />
+      </div>
+
+    </div>
+    <div class="col-2"><br>
+      <button type="button" style="margin: 10px" class="btn btn-outline-secondary" {{action "add" this.dispoItems this.includedItems this.dispoItems_}}> ajouter </button><br>
+      <button type="button" style="margin: 10px" class="btn btn-outline-secondary" {{action "remove" this.dispoItems this.includedItems this.dispoItems}}> ajouter tout </button><br>
+      <button type="button" style="margin: 10px" class="btn btn-outline-secondary" {{action "add" this.includedItems this.dispoItems this.includedItems_}}> retirer </button><br>
+      <button type="button" style="margin: 10px" class="btn btn-outline-secondary" {{action "remove" this.includedItems this.dispoItems this.includedItems}}> retirer tout </button>
+    </div>
+    <div class="col-5">
+      <h6>Produits à inclure</h6>
+      <div class="input-group">
+        <MultiSelect class="form-control"
+                     @elements={{this.includedItems}}
+                     @selected={{this.includedItems_}}
+                     @onChange={{this.changeIncluded}}
+        />
+      </div>
+    </div>
+  </div><br>
+
+  {{#if this.includedItems}}
+    <button type="button" class="btn btn-dark" {{action "etapeSuivante"}}> Etape suivante </button>
+  {{/if}}
+
+</div>
+
+
+{{outlet}}
