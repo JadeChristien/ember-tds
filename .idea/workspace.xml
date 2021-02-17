@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e3c73056-517f-4bed-b220-ba9a17f97c9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/step1.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/step1.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/step1.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/step1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/array-contains.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/array-contains.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/step1.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/step1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +32,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.ember-template-lint" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.ember-template-lint" value="project" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.ember-template-lint" value="C:\Users\Jade\Documents\00_IUT\04_Semestre4\M4103C_ClientRiche\myGit\tds\node_modules\ember-template-lint" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -63,7 +68,10 @@
       <workItem from="1612613829502" duration="199000" />
       <workItem from="1612856738721" duration="28000" />
       <workItem from="1612961614568" duration="9000" />
-      <workItem from="1613026784872" duration="15857000" />
+      <workItem from="1613026784872" duration="16022000" />
+      <workItem from="1613325204945" duration="68000" />
+      <workItem from="1613325309899" duration="1391000" />
+      <workItem from="1613492204290" duration="28000" />
     </task>
     <servers />
   </component>
