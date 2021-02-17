@@ -1,0 +1,18 @@
+{{page-title "Add"}}
+<div class="row">
+  <div class="col">
+    <Input @value={{@model.nom}} class="form-control" placeholder="Entrez votre nom"/>
+  </div>
+  <div class="col">
+    <Input @value={{@model.prenom}} class="form-control" placeholder="Entrez votre prenom"/>
+  </div>
+  <div class="col">
+    <Input @value={{@model.email}} class="form-control" placeholder="Entrez votre email" type="email"/>
+  </div>
+  <div class="col">
+    <button class="btn btn-primary" {{action "save" @model}}>Enregistrer</button>
+    <LinkTo @route="contacts" class="btn btn-secondary">Annuler</LinkTo>
+  </div>
+</div>
+
+{{outlet}}

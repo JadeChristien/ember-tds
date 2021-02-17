@@ -1,0 +1,38 @@
+{{page-title "Contacts"}}
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Nom</th>
+    <th scope="col">Prenom</th>
+    <th scope="col">Mail</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each @model.contacts as |contact|}}
+    <tr>
+      <td>{{contact.nom}}</td>
+      <td>{{contact.prenom}}</td>
+      <td>{{contact.email}}</td>
+      <td>
+        <LinkTo class="btn btn-primary btn-sm" @route="contacts.update" @model={{ contact.id }} ><i class="fas fa-edit"></i></LinkTo>
+        <button {{ action "delete" contact}} class="btn btn-primary btn-sm"><i class="far fa-trash-alt"></i></button>
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+  <tfoot>
+  <tr>
+    <td>
+      <LinkTo @route="contacts.add" class="btn btn-primary">Ajouter</LinkTo>
+      {{#if @model.deletedsCount}}
+        <button class="btn btn-danger" {{action "cancelDeletion" @model.deleteds}}>Annuler la suppression ({{@model.deletedsCount}})</button>
+        <button class="btn btn-success" {{action "confirmDeletion" @model.deleteds}}>Confirmer la suppression ({{@model.deletedsCount}})</button>
+      {{else}}
+
+      {{/if}}
+    </td>
+  </tr>
+  </tfoot>
+</table>
+{{outlet}}
