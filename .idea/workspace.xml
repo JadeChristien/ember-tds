@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c73056-517f-4bed-b220-ba9a17f97c9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/node_modules_tds.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/tds.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/step1.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/step1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/array-contains.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/array-contains.js" afterDir="false" />
@@ -72,6 +81,7 @@
       <workItem from="1613325204945" duration="68000" />
       <workItem from="1613325309899" duration="1391000" />
       <workItem from="1613492204290" duration="28000" />
+      <workItem from="1613566110201" duration="706000" />
     </task>
     <servers />
   </component>
