@@ -25,4 +25,5 @@ export default class ContactsRoute extends Route {
       (t)=>t.save()
     )
   }
+
 }
