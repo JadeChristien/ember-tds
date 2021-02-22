@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e3c73056-517f-4bed-b220-ba9a17f97c9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ember-cli-build.js" beforeDir="false" afterPath="$PROJECT_DIR$/ember-cli-build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +78,8 @@
       <workItem from="1613570087049" duration="130000" />
       <workItem from="1613570219484" duration="7554000" />
       <workItem from="1613909442257" duration="3531000" />
-      <workItem from="1613994618693" duration="592000" />
+      <workItem from="1613994618693" duration="1501000" />
+      <workItem from="1613999281272" duration="1376000" />
     </task>
     <servers />
   </component>
