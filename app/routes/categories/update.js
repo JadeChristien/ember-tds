@@ -5,7 +5,4 @@ export default class CategoriesUpdateRoute extends Route {
     return {};
   }
 
-  afterModel(){
-
-  }
 }

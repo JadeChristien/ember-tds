@@ -1,2 +1,11 @@
 {{page-title "Add"}}
+<div class="row">
+  <div class="col">
+    <Input class="form-control" @value={{@model.nom}}  placeholder="Entrez un nom de categorie"/>
+  </div>
+  <div class="col">
+    <button class="btn btn-primary" {{action "save" @model}}>Enregistrer</button>
+    <LinkTo @route="categories" class="btn btn-secondary">Annuler</LinkTo>
+  </div>
+</div>
 {{outlet}}
