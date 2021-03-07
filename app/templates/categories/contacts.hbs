@@ -1,2 +1,22 @@
 {{page-title "Contacts"}}
+<table class="table table-striped">
+  <tbody>
+  {{#each @model as |contact|}}
+    <tr>
+      <td>{{contact.nom}}</td>
+      <button {{ action "delete" contact}} class="btn btn-danger btn-sm"><i class="far fa-trash-alt" style="color: white"></i></button>
+    </tr>
+  {{/each}}
+  </tbody>
+  <tfoot>
+  <tr>
+    <td>
+      {{#if @model.deletedsCount}}
+        <button class="btn btn-danger" {{action "cancelDeletion" @model.deleteds}}>Annuler la suppression ({{@model.deletedsCount}})</button>
+        <button class="btn btn-success" {{action "confirmDeletion" @model.deleteds}}>Confirmer la suppression ({{@model.deletedsCount}})</button>
+      {{/if}}
+    </td>
+  </tr>
+  </tfoot>
+</table>
 {{outlet}}

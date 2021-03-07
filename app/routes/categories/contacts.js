@@ -3,14 +3,18 @@ import { action } from '@ember/object';
 
 export default class CategoriesContactsRoute extends Route {
   //retourne la catégorie à afficher (correspondant à params.category_id)
-  model(params){};
+  model(params) {
+    return params.category_id;
+  };
 
   //Initialise les données category et datas (contacts) du contrôleur à partir du contenu de model.
   setUpController(controller, model){
+    controller.set('model', model);
   }
 
   //Effectue un reload du model pour recharger les données avant transition.
   willTransition(){
+    return true;
   }
 
   //Marque un contact comme isDeleted.

@@ -8,6 +8,11 @@
       {{#each @model as |categorie|}}
         <tr>
           <td>{{categorie.nom}}</td>
+          <td>
+            <LinkTo class="btn btn-info btn-sm" @route="categories.update" @model={{ categorie.id }} ><i class="fas fa-edit" style="color: white"></i></LinkTo>
+            <!-- Clic sur bouton doit afficher en dessous un tableau des contacts de cette catégorie -->
+            <LinkTo class="btn btn-info btn-sm" @route="categories.contacts" @model={{ categorie.id }} ><i class="fas fa-book-open" style="color: white"></i></LinkTo>
+          </td>
         </tr>
       {{/each}}
       </tbody>
