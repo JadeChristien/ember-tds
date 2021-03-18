@@ -1,0 +1,8 @@
+{{page-title "Add"}}
+<div class="input-group mb-3">
+  <Input type="text" class="form-control" placeholder="Nouvelle section" @value={{ @model.name }}>
+  <div class="input-group-append">
+    <button {{action "save" @model.name}} class="btn btn-outline-secondary" type="button">Valider</button>
+  </div>
+</div>
+{{outlet}}

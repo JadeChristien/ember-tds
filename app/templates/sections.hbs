@@ -1,2 +1,34 @@
 {{page-title "Sections"}}
-{{outlet}}
+<div class="container">
+  <br><h2>Store</h2>
+  <div class="card">
+    <div class="card-header">
+      Gestion des stocks
+    </div>
+    <div class="card-body">
+      <LinkTo class="btn btn-success" @route="sections.add" style="margin-bottom: 10px">Nouvelle section</LinkTo>
+      <LinkTo class="btn btn-success" @route="sections.addProduct" style="margin-bottom: 10px">Nouveau produit</LinkTo>
+
+      {{outlet}}
+
+      <table class="table table-striped" style="margin-top: 10px">
+        <tbody>
+        {{#each @model as |section|}}
+          <tr>
+            <td>{{section.name}}</td>
+            <td> {{ section.products.length }}</td>
+            <td>
+              <LinkTo class="btn btn-secondary btn-sm" @route="sections.edit" @model={{ section.id }} ><i class="fas fa-edit" style="color: white"></i></LinkTo>
+              <LinkTo class="btn btn-secondary btn-sm" @route="sections.delete" @model={{ section.id }} ><i class="far fa-trash-alt" style="color: white"></i></LinkTo>
+            </td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <br>
+  <LinkTo class="btn btn-dark" @route="board">Retour au tableau de bord</LinkTo>
+
+</div>
