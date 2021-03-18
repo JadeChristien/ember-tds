@@ -5,6 +5,10 @@ import { action } from '@ember/object';
 export default class IndexRoute extends Route {
   @service userAuth;
 
+  model(){
+    return {};
+  }
+
   @action
   login(model) {
     this.store
@@ -12,7 +16,7 @@ export default class IndexRoute extends Route {
       .then((data) => {
         if (data.length) {
           let user = data.firstObject;
-          if (user.password === model.password) {
+          if (user.password && user.password === model.password) {
             this.userAuth.login(user);
             this.transitionTo('board');
           }
