@@ -19,7 +19,7 @@
             <td> {{ section.products.length }}</td>
             <td>
               <LinkTo class="btn btn-secondary btn-sm" @route="sections.edit" @model={{ section.id }} ><i class="fas fa-edit" style="color: white"></i></LinkTo>
-              <LinkTo class="btn btn-secondary btn-sm" @route="sections.delete" @model={{ section.id }} ><i class="far fa-trash-alt" style="color: white"></i></LinkTo>
+              <button class="btn btn-secondary btn-sm" {{action "delete" section }} ><i class="far fa-trash-alt" style="color: white"></i></button>
             </td>
           </tr>
         {{/each}}

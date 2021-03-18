@@ -9,8 +9,8 @@ export default class SectionsAddRoute extends Route {
 
   @action
   save(data) {
-    let contact = this.store.createRecord('section', data);
-    contact.save().then(
+    let section = this.store.createRecord('section', data);
+    section.save().then(
       ()=>this.transitionTo("sections")
     );
   }
