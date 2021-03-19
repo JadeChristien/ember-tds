@@ -1,15 +1,15 @@
 {{page-title "Sections"}}
-<div class="container">
   <br><h2>Store</h2>
   <div class="card">
     <div class="card-header">
       Gestion des stocks
     </div>
     <div class="card-body">
-      <LinkTo class="btn btn-success" @route="sections.add" style="margin-bottom: 10px">Nouvelle section</LinkTo>
-      <LinkTo class="btn btn-success" @route="sections.addProduct" style="margin-bottom: 10px">Nouveau produit</LinkTo>
+      <LinkTo class="btn btn-success" @route="sections.add">Nouvelle section</LinkTo>
+      <LinkTo class="btn btn-success" @route="sections.addProduct">Nouveau produit</LinkTo>
 
       {{outlet}}
+
 
       <table class="table table-striped" style="margin-top: 10px">
         <tbody>
@@ -31,4 +31,3 @@
   <br>
   <LinkTo class="btn btn-dark" @route="board">Retour au tableau de bord</LinkTo>
 
-</div>

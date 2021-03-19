@@ -1,2 +1,17 @@
 {{page-title "Order"}}
+<div class="container">
+  <br><center><h2>Commande n°{{@model.id}}</h2></center><br>
+
+  <label><b>Date de création : </b>{{@model.dateCreation}}</label><br>
+  <label><b>Status : </b>{{@model.status}}</label><br>
+  <label><b>Montant : </b>{{@model.amount}}</label><br>
+  <label><b>A payer : </b>{{@model.toPay}}</label><br>
+  <label><b>Nombre d'items : </b>{{@model.itemsNumber}}</label><br>
+  <label><b>Numéro manquant : </b>{{@model.missingNumber}}</label><br>
+  <label><b>Employé : </b>{{@model.employee}}</label><br>
+  <label><b>Lot : </b>{{@model.timeslot}}</label><br>
+  <label><b>Utilisateur : </b>{{@model.user}}</label><br><br>
+
+  <LinkTo class="btn btn-dark" @route="board">Retour au tableau de bord</LinkTo>
+</div>
 {{outlet}}

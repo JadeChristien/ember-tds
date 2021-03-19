@@ -13,8 +13,8 @@ Router.map(function () {
   this.route('sections', function() {
     this.route('add');
     this.route('addProduct');
-    this.route('delete', { path: 'sections/delete/:section_id' });
-    this.route('edit', { path: 'sections/edit/:section_id' });
+    this.route('delete', { path: 'delete/:section_id' });
+    this.route('edit', { path: 'edit/:section_id' });
   });
   this.route('logout');
 });

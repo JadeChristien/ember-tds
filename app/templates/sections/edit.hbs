@@ -1,2 +1,22 @@
 {{page-title "Edit"}}
+<hr>
+<h4>{{@model.name}} - {{ @model.products.length }} produits</h4>
+
+<table class="table table-striped" style="margin-top: 10px">
+  <tbody>
+  {{#each @model.products as |product|}}
+    <tr>
+      <td>{{ product.name}}</td>
+      <td>{{ product.price}}€</td>
+      <td>
+        <button class="btn btn-secondary btn-sm" {{action "modifier" product}} ><i class="fas fa-edit" style="color: white"></i></button>
+        <button class="btn btn-secondary btn-sm" {{action "delete" product }} ><i class="far fa-trash-alt" style="color: white"></i></button>
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+
+<LinkTo class="btn btn-outline-secondary" @route="sections">Annuler</LinkTo>
+<hr>
 {{outlet}}
