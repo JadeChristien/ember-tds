@@ -1,17 +1,55 @@
 {{page-title "Order"}}
-<div class="container">
-  <br><center><h2>Commande n°{{@model.id}}</h2></center><br>
+<br><h2>
+  Préparation de la commande
+  <LinkTo class="ui right floated secondary button" @route="board">Retour au tableau de bord</LinkTo>
+</h2><br>
 
-  <label><b>Date de création : </b>{{@model.dateCreation}}</label><br>
-  <label><b>Status : </b>{{@model.status}}</label><br>
-  <label><b>Montant : </b>{{@model.amount}}</label><br>
-  <label><b>A payer : </b>{{@model.toPay}}</label><br>
-  <label><b>Nombre d'items : </b>{{@model.itemsNumber}}</label><br>
-  <label><b>Numéro manquant : </b>{{@model.missingNumber}}</label><br>
-  <label><b>Employé : </b>{{@model.employee}}</label><br>
-  <label><b>Lot : </b>{{@model.timeslot}}</label><br>
-  <label><b>Utilisateur : </b>{{@model.user}}</label><br><br>
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-header"><h5>Client</h5></div>
+      <div class="card-body">
+        Nom : {{@model.user}}<br>
+        Email : {{@model.user.email}}
+      </div>
+    </div>
+  </div>
+  <di class="col-6">
+    <div class="card">
+      <div class="card-header"><h5>Commande</h5></div>
+      <div class="card-body">
+        Commande n°{{@model.id}}<br>
+        Montant : {{@model.amount}}<br>
+        Nombre de produits : {{@model.itemsNumber}}
+      </div>
+    </div>
+  </di>
+</div><br>
 
-  <LinkTo class="btn btn-dark" @route="board">Retour au tableau de bord</LinkTo>
+<div class="card">
+  <div class="card-header"><h5>A préparer</h5></div>
+  <div class="card-body">
+    <label><b>Date de création : </b>{{@model.dateCreation}}</label><br>
+    <label><b>Status : </b>{{@model.status}}</label><br>
+    <label><b>Montant : </b>{{@model.amount}}</label><br>
+    <label><b>A payer : </b>{{@model.toPay}}</label><br>
+    <label><b>Nombre d'items : </b>{{@model.itemsNumber}}</label><br>
+    <label><b>Numéro manquant : </b>{{@model.missingNumber}}</label><br>
+    <label><b>Employé : </b>{{@model.employee}}</label><br>
+    <label><b>Lot : </b>{{@model.timeslot}}</label><br>
+    <label><b>Utilisateur : </b>{{@model.user}}</label>
+  </div>
+</div><br>
+
+<div class="card">
+  <div class="card-header"><h5>Avancement</h5></div>
+  <div class="card-body">
+    <div class="ui indicating progress">
+      <div class="bar"></div>
+      <div class="label">Produits préparés</div>
+    </div>
+    <LinkTo class="ui red basic button" @route="board"><i class="close icon"></i>Annuler la commande</LinkTo>
+    <LinkTo class="ui right floated green basic button" @route="board"><i class="check icon"></i>Commande préparée</LinkTo>
+  </div>
 </div>
 {{outlet}}

@@ -1,19 +1,22 @@
 {{page-title "Board"}}
-<div class="ui green segment">
-  <span class="ui label">{{@model.employee.email}}</span>
-  <button class="ui black button" {{action "logout"}}>
-    Logout
-  </button>
+<div class="ui menu">
+  <div class="item"><span class="ui label">{{@model.employee.email}}</span></div>
+  <div class="right menu">
+    <div class="ui right floated grey basic button" {{action "logout"}}>Logout</div>
+  </div>
 </div>
+
 <h2>Orders</h2>
-<ul>
+<div class="ui relaxed divided list">
   {{#each @model.orders as |order|}}
-    <li>
-      <LinkTo @route="order" @model={{order.id}}>
-        {{order.dateCreation}} <span class="ui circular label">{{order.orderdetails.length}}</span>
-      </LinkTo>
-    </li>
+    <div class="item">
+      <i class="large shopping basket middle aligned icon"></i>
+      <div class="content">
+        <a class="header"><LinkTo @route="order" @model={{order.id}}>Commande n°{{order.id}}</LinkTo></a>
+        <div class="description">{{order.dateCreation}} <span class="ui label">{{order.orderdetails.length}}</span></div>
+      </div>
+    </div>
   {{/each}}
-</ul>
+</div>
 <LinkTo @route="sections" class="btn btn-success">Sections</LinkTo>
 {{outlet}}
