@@ -7,6 +7,17 @@
         <Input type="text" class="form-control" id="nameProd" placeholder="Nom" @value={{ @model.products.name }}/>
       </div>
       <div class="col-sm">
+        <UiDropdown class="selection" @selected={{@model.product.section}} @onChange={{fn (mut @model.product)}}>
+          <div class="default text">Section</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            {{#each @model.sections as |section|}}
+              <div data-value="{{map-value section}}" class="item">
+                {{section.name}}
+              </div>
+            {{/each}}
+          </div>
+        </UiDropdown>
         <select class="form-control" id="selectSection">
           <option selected>Section</option>
           {{#each @model as |section|}}

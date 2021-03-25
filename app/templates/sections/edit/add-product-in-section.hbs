@@ -1,0 +1,22 @@
+{{page-title "AddProductInSection"}}
+<form><hr>
+  <div class="form-group">
+    <div class="row" style="margin-top: 10px; margin-bottom: 10px">
+      <div class="col-sm">
+        <Input type="text" class="form-control" id="nameProd" placeholder="Nom" @value={{ @model.name }}/>
+      </div>
+      <div class="col-sm">
+        <Input type="text" class="form-control" id="priceProd" placeholder="Prix" @value={{ @model.price }}/>
+      </div>
+      <div class="col-sm">
+        <Input type="text" class="form-control" id="promProd" placeholder="Promotion" @value={{ @model.promotion }}/>
+      </div>
+    </div>
+
+    <Textarea class="form-control" id="commentProd" rows="3" placeholder="Commentaires" style="margin-bottom: 10px" @value={{ @model.comments }}/>
+
+    <button {{action "save" @model}} class="btn btn-outline-secondary" type="button">Valider le produit</button>
+    <LinkTo class="btn btn-secondary" @route="sections.edit" @model={{ @model.section.id }}>Annuler</LinkTo>
+  </div><hr>
+</form>
+{{outlet}}
