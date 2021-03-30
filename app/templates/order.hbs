@@ -33,6 +33,7 @@
     <table class="ui single line table">
       <thead>
         <tr>
+          <th>Section</th>
           <th>Nom</th>
           <th>Prix</th>
           <th>Quantité</th>
@@ -42,13 +43,19 @@
       <tbody>
       {{#each @model.orderdetails as |order|}}
         <tr>
+          <td>{{ order.product.section.name }}</td>
           <td>{{ order.product.name }}</td>
           <td>{{ order.product.price }}</td>
           <td>{{ order.quantity }}</td>
           <td>
             <div class="ui checked checkbox">
-              <input type="checkbox">
-              <label>Préparée</label>
+              <!-- Si le champ prepared de produit est égal à 1, on coche la checkbox sinon non-->
+              {{#if order.product.prepared}}
+                <input type="checkbox" id="checkbox" checked>
+              {{else}}
+                <input type="checkbox" id="checkbox" onclick={{action "isprepared" order.product.id}}>
+              {{/if}}
+              <label for="checkbox">Préparée</label>
             </div>
           </td>
         </tr>
