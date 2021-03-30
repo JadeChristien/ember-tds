@@ -27,7 +27,7 @@
           <td>{{ product.name}}</td>
           <td>{{ product.price}}€</td>
           <td>
-            <button class="btn btn-secondary btn-sm" {{action "modifier" product}} ><i class="fas fa-edit" style="color: white"></i></button>
+            <LinkTo @route="sections.edit.addProductInSection" class="btn btn-secondary btn-sm"><i class="fas fa-edit" style="color: white"></i></LinkTo>
             <button class="btn btn-secondary btn-sm" {{action "delete" product }} ><i class="far fa-trash-alt" style="color: white"></i></button>
           </td>
         </tr>

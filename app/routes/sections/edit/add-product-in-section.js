@@ -4,8 +4,6 @@ import { action } from '@ember/object';
 export default class SectionsEditAddProductInSectionRoute extends Route {
 
   model(){
-    //Obj js vide -> produit
-    //section
     return { section: this.modelFor('sections.edit') };
   }
 
@@ -16,4 +14,5 @@ export default class SectionsEditAddProductInSectionRoute extends Route {
       ()=>this.transitionTo("sections.edit")
     );
   }
+
 }

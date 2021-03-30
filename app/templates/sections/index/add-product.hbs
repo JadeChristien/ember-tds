@@ -4,39 +4,33 @@
 
     <div class="row">
       <div class="col-sm">
-        <Input type="text" class="form-control" id="nameProd" placeholder="Nom" @value={{ @model.products.name }}/>
+        <Input type="text" class="form-control" id="nameProd" placeholder="Nom" @value={{ @model.name }}/>
       </div>
       <div class="col-sm">
-        <UiDropdown class="selection" @selected={{@model.product.section}} @onChange={{fn (mut @model.product)}}>
-          <div class="default text">Section</div>
+        <UiDropdown class="selection form-control" @selected={{@model.section}} @onChange={{fn (mut @model.section)}} as |execute mapper|>
+          <div class="default text">Sections</div>
           <i class="dropdown icon"></i>
           <div class="menu">
             {{#each @model.sections as |section|}}
-              <div data-value="{{map-value section}}" class="item">
+              <div data-value="{{map-value mapper section}}" class="item">
                 {{section.name}}
               </div>
             {{/each}}
           </div>
         </UiDropdown>
-        <select class="form-control" id="selectSection">
-          <option selected>Section</option>
-          {{#each @model as |section|}}
-            <option value={{section.name}}>{{section.name}}</option>
-          {{/each}}
-        </select>
       </div>
     </div>
 
     <div class="row" style="margin-top: 10px; margin-bottom: 10px">
       <div class="col-sm">
-        <Input type="text" class="form-control" id="priceProd" placeholder="Prix" @value={{ @model.products.price }}/>
+        <Input type="text" class="form-control" id="priceProd" placeholder="Prix" @value={{ @model.price }}/>
       </div>
       <div class="col-sm">
-        <Input type="text" class="form-control" id="promProd" placeholder="Promotion" @value={{ @model.products.promotion }}/>
+        <Input type="text" class="form-control" id="promProd" placeholder="Promotion" @value={{ @model.promotion }}/>
       </div>
     </div>
 
-    <Textarea class="form-control" id="commentProd" rows="3" placeholder="Commentaires" style="margin-bottom: 10px" @value={{ @model.products.comments }}/>
+    <Textarea class="form-control" id="commentProd" rows="3" placeholder="Commentaires" style="margin-bottom: 10px" @value={{ @model.comments }}/>
 
     <button {{action "save" @model}} class="btn btn-outline-secondary" type="button">Valider le produit</button>
     <LinkTo class="btn btn-outline-secondary" @route="sections">Annuler</LinkTo>

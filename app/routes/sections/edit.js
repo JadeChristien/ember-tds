@@ -2,7 +2,6 @@ import Route from '@ember/routing/route';
 import { action } from '@ember/object';
 
 export default class SectionsEditRoute extends Route {
-
   model(params) {
     return this.store.findRecord('section', params.section_id, {
       include: 'products',
@@ -10,7 +9,14 @@ export default class SectionsEditRoute extends Route {
   }
 
   @action
-  delete(product){
+  delete(product) {
     product.destroyRecord();
+  }
+
+  @action
+  update(product) {
+    product.save().then(() => {
+      this.transitionTo('');
+    });
   }
 }

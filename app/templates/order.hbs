@@ -9,7 +9,7 @@
     <div class="card">
       <div class="card-header"><h5>Client</h5></div>
       <div class="card-body">
-        Nom : {{@model.user}}<br>
+        Nom : {{@model.user.name}}<br>
         Email : {{@model.user.email}}
       </div>
     </div>
@@ -19,7 +19,7 @@
       <div class="card-header"><h5>Commande</h5></div>
       <div class="card-body">
         Commande n°{{@model.id}}<br>
-        Montant : {{@model.amount}}<br>
+        Montant : {{@model.amount}}€<br>
         Nombre de produits : {{@model.itemsNumber}}
       </div>
     </div>
@@ -29,15 +29,31 @@
 <div class="card">
   <div class="card-header"><h5>A préparer</h5></div>
   <div class="card-body">
-    <label><b>Date de création : </b>{{@model.dateCreation}}</label><br>
-    <label><b>Status : </b>{{@model.status}}</label><br>
-    <label><b>Montant : </b>{{@model.amount}}</label><br>
-    <label><b>A payer : </b>{{@model.toPay}}</label><br>
-    <label><b>Nombre d'items : </b>{{@model.itemsNumber}}</label><br>
-    <label><b>Numéro manquant : </b>{{@model.missingNumber}}</label><br>
-    <label><b>Employé : </b>{{@model.employee}}</label><br>
-    <label><b>Lot : </b>{{@model.timeslot}}</label><br>
-    <label><b>Utilisateur : </b>{{@model.user}}</label>
+    <table class="ui single line table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prix</th>
+          <th>Quantité</th>
+          <th>Préparée</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each @model.orderdetails as |order|}}
+        <tr>
+          <td>{{ order.product.name }}</td>
+          <td>{{ order.product.price }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>
+            <div class="ui checked checkbox">
+              <input type="checkbox">
+              <label>Préparée</label>
+            </div>
+          </td>
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
   </div>
 </div><br>
 
