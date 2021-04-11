@@ -19,4 +19,10 @@ export default class OrderController extends Controller {
     this.resultat = (n / checkboxCount) * 100;
     console.log(this.resultat);
   }
+
+  @action
+  next(param){
+    console.log(param);
+  }
+
 }

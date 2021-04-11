@@ -72,8 +72,9 @@
     <label for="progressbar" class="ui center aligned container">{{this.resultat}}% de préparé</label>
     <br>
 
+    <Input @type="hidden" @checked={{@model.status}}/>
     <LinkTo class="ui red basic button" @route="board"><i class="close icon"></i>Annuler la commande</LinkTo>
-    <LinkTo class="ui right floated green basic button" @route="board"><i class="check icon"></i>Commande préparée</LinkTo>
+    <button class="ui right floated green basic button" {{action "next" @model.id }} ><i class="check icon"></i>Commande préparée<</button>
   </div>
 </div>
 {{outlet}}
